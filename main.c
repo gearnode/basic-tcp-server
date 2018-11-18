@@ -29,7 +29,9 @@ typedef struct server {
   int listen_fd;
 } server_t;
 
-int server_listen(server_t* server) {
+int
+server_listen(server_t* server)
+{
   int err = 0;
   struct sockaddr_in server_addr = { 0 };
 
@@ -69,7 +71,9 @@ int server_listen(server_t* server) {
 }
 
 
-int server_accept(server_t* server) {
+int
+server_accept(server_t* server)
+{
   int err = 0;
   int conn_fd;
   socklen_t client_len;
